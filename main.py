@@ -25,7 +25,7 @@ st.title('PAPY NGRAM VIEWER')
 
 #we want it in session state
 #st.header('OMNES')
-df = pd.read_csv('Desktop/out/omnes.csv')
+df = pd.read_csv('~/Desktop/out/omnes.csv')
 #with st.expander('show'):
 #    st.write(df)
 
