@@ -25,7 +25,7 @@ st.title('PAPY NGRAM VIEWER')
 
 #we want it in session state
 #st.header('OMNES')
-uploaded_zip = st.file_uploader('XML File', type="zip")
+uploaded_zip = st.file_uploader("load omnes")
 if (uploaded_zip is not None):
     zf = zipfile.ZipFile(uploaded_zip)
 
