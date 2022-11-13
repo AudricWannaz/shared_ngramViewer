@@ -18,6 +18,8 @@ import streamlit as st
 import pandas as pd
 import ast
 #import seaborn as sns
+import zipfile
+
 
 st.title('PAPY NGRAM VIEWER')
 
@@ -25,9 +27,11 @@ st.title('PAPY NGRAM VIEWER')
 
 #we want it in session state
 #st.header('OMNES')
-uploaded_zip = st.file_uploader("load omnes")
-if (uploaded_zip is not None):
-    zf = zipfile.ZipFile(uploaded_zip)
+with zipfile.ZipFile("out(2).zip", 'r') as zip_ref:
+    zip_ref.extractall(directory_to_extract_to)
+#uploaded_zip = st.file_uploader("load omnes")
+#if (uploaded_zip is not None):
+ #   zf = zipfile.ZipFile(uploaded_zip)
 
 print(type(zf))
 st.stop()
