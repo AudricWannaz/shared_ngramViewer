@@ -27,16 +27,20 @@ st.title('PAPY NGRAM VIEWER')
 
 #we want it in session state
 #st.header('OMNES')
-with zipfile.ZipFile("out(2).zip", 'r') as zip_ref:
-    zip_ref.extractall(directory_to_extract_to)
+with zipfile.ZipFile("out (2).zip", 'r') as zip_ref:
+    zip_ref.extractall("out")
+  
 #uploaded_zip = st.file_uploader("load omnes")
 #if (uploaded_zip is not None):
  #   zf = zipfile.ZipFile(uploaded_zip)
 
-print(type(zf))
-st.stop()
+#print(type(zf))
+#st.stop()
+df = pd.read_csv('out/16251.csv')
 
-df = pd.read_csv('~/Desktop/out/omnes.csv')
+st.write(df.head())
+st.stop()
+#df = pd.read_csv('~/Desktop/out/omnes.csv')
 #with st.expander('show'):
 #    st.write(df)
 
